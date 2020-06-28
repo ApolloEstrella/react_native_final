@@ -43,21 +43,21 @@ const validate = values => {
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
-    .min(4, 'Minimun length of 4')
+    .min(4, 'Minimum length of 4')
     .required('Required'),
   phone: Yup.string()
-    .min(11, 'Minimun length of 11')
-    .max(11, 'Minimun length of 11')
+    .min(11, 'Minimum length of 11')
+    .max(11, 'Minimum length of 11')
     .required('Required'),
   email: Yup.string()
     .email('Invalid email')
     .required('Required'),
   password: Yup.string()
-    .min(8, 'Minimun length of 8')
+    .min(8, 'Minimum length of 8')
     .required('Required'),
   confirm_password: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
-    .min(8, 'Minimun length of 8')
+    .min(8, 'Minimum length of 8')
     .required('Required'),
 });
 
